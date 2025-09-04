@@ -1,0 +1,11 @@
+node_modules/
+.venv/
+
+xss-listener/
+
+capture.log
+__pycache__/
+
+gemastik/
+
+comfest/

