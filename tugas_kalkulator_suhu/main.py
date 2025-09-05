@@ -37,16 +37,14 @@ def konversi_suhu(nilai, dari, ke):
 
 print("=== KONVERSI SUHU ===")
 try:
-    nilai = float(input("Masukkan nilai suhu: "))
+    nilai = int(input("Masukkan nilai suhu: "))
     dari = input("Dari satuan (C/F/K): ")
     tujuan = input("ke satuan (C/F/K): ")
 
     hasil = konversi_suhu(nilai, dari, tujuan)
 
-    if isinstance(hasil, str):  # kalau hasil berupa pesan error
-        print(hasil)
-    else:
-        print(f"Hasil: {nilai}°{dari.upper()} = {hasil:.2f}°{tujuan.upper()}")
+
+    print(f"Hasil: {nilai}°{dari.upper()} = {hasil:.2f}°{tujuan.upper()}")
 
 except ValueError:
     print("Error: Nilai suhu harus berupa angka.")
